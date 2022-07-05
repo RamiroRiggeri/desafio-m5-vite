@@ -1,4 +1,4 @@
-var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n;var c=(e,t,n)=>(y(e,typeof t!="symbol"?t+"":t,n),n);const x=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const r of a.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function n(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerpolicy&&(a.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?a.credentials="include":o.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(o){if(o.ep)return;o.ep=!0;const a=n(o);fetch(o.href,a)}};x();function v(e){const t=document.createElement("div");t.className="homepage",t.innerHTML=`
+var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n;var c=(e,t,n)=>(y(e,typeof t!="symbol"?t+"":t,n),n);const v=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const r of a.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function n(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerpolicy&&(a.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?a.credentials="include":o.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(o){if(o.ep)return;o.ep=!0;const a=n(o);fetch(o.href,a)}};v();function x(e){const t=document.createElement("div");t.className="homepage",t.innerHTML=`
         <div class="inicio">
           <h1 class="titulo">Piedra Papel \xF3 Tijera</h1>
           <div class="boton">
@@ -187,7 +187,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
     left: 0;
     right: 0;
   }
-  `,t.appendChild(a),setTimeout(()=>{e.goTo("/scores-page")},2e3),t}const S=[{path:/\/welcome/,component:v},{path:/\/instrucciones/,component:b},{path:/\/game/,component:w},{path:/\/result/,component:E},{path:/\/scores-page/,component:j}];function k(e){function t(i){history.pushState({},"",i),n(i)}function n(i){for(const o of S)if(o.path.test(i)){const a=o.component({goTo:t});e.firstChild&&e.firstChild.remove(),e.appendChild(a)}}location.pathname=="/desafio-m5-vite/",t("/welcome"),window.onpopstate=function(i){n(location.pathname)}}function C(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("item"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n;const a=document.createElement("style");a.innerHTML=`
+  `,t.appendChild(a),setTimeout(()=>{e.goTo("/scores-page")},2e3),t}const S=[{path:/\/welcome/,component:x},{path:/\/instrucciones/,component:b},{path:/\/game/,component:w},{path:/\/result/,component:E},{path:/\/scores-page/,component:j}];function k(e){function t(i){history.pushState({},"",i),n(i)}function n(i){for(const o of S)if(o.path.test(i)){const a=o.component({goTo:t});e.firstChild&&e.firstChild.remove(),e.appendChild(a)}}location.pathname=="/desafio-m5-vite/",t("/welcome"),window.onpopstate=function(i){n(location.pathname)}}function C(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("item"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n;const a=document.createElement("style");a.innerHTML=`
       .piedra{
         bottom: 0px;
         left: 30px;
@@ -209,7 +209,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("../img/tijera.svg");
+        background-image: url("desafio-m5-vite/assets/tijera.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
