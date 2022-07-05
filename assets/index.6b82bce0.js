@@ -1,4 +1,4 @@
-var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n;var c=(e,t,n)=>(b(e,typeof t!="symbol"?t+"":t,n),n);const v=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const r of a.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function n(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerpolicy&&(a.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?a.credentials="include":o.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(o){if(o.ep)return;o.ep=!0;const a=n(o);fetch(o.href,a)}};v();function w(e){const t=document.createElement("div");t.className="homepage",t.innerHTML=`
+var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n;var c=(e,t,n)=>(y(e,typeof t!="symbol"?t+"":t,n),n);const x=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const a of o)if(a.type==="childList")for(const r of a.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function n(o){const a={};return o.integrity&&(a.integrity=o.integrity),o.referrerpolicy&&(a.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?a.credentials="include":o.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(o){if(o.ep)return;o.ep=!0;const a=n(o);fetch(o.href,a)}};x();function v(e){const t=document.createElement("div");t.className="homepage",t.innerHTML=`
         <div class="inicio">
           <h1 class="titulo">Piedra Papel \xF3 Tijera</h1>
           <div class="boton">
@@ -43,7 +43,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
     justify-content: space-around;
     align-items: flex-end;
   }
-  `,t.appendChild(n),t.querySelector(".boton").addEventListener("click",()=>{e.goTo("/instrucciones")}),t}function j(e){const t=document.createElement("div");t.className="homepage",t.innerHTML=`
+  `,t.appendChild(n),t.querySelector(".boton").addEventListener("click",()=>{e.goTo("/instrucciones")}),t}function b(e){const t=document.createElement("div");t.className="homepage",t.innerHTML=`
           <div class="inicio">
           <h1 class="titulo">Presion\xE1 jugar
           y eleg\xED: piedra, papel o tijera antes de que pasen los 3 segundos.</h1>
@@ -87,7 +87,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
     justify-content: space-around;
     align-items: flex-end;
   }
-  `,t.appendChild(n),t.querySelector(".boton").addEventListener("click",()=>{e.goTo("/game")}),t}const s={data:{currentGame:{cpuPlay:"",playerPlay:""},history:{player:0,cpu:0,draw:0}},listeners:[],getState(){return JSON.parse(localStorage.getItem("saved-games"))?(this.data.history=JSON.parse(localStorage.getItem("saved-games")),this.data):this.data},setState(e){this.data=e;for(const t of this.listeners)t(e);localStorage.setItem("saved-games",JSON.stringify(e.history))},subscribe(e){this.listeners.push(e)},setMove(e){const t=this.getState();t.currentGame.playerPlay=e,t.currentGame.cpuPlay=this.cpuRandomizer(Math.trunc(Math.random()*3))},cpuRandomizer(e){return{0:"tijera",1:"papel",2:"piedra"}[e]},whoWins(e,t){const n=this.getState();if(e=="")console.log("no se seleccion\xF3 opci\xF3n");else return e==t?(n.history.draw++,this.setState(n),"draw"):e=="papel"&&t=="piedra"||e=="tijera"&&t=="papel"||e=="piedra"&&t=="tijera"?(n.history.player++,this.setState(n),"win"):(n.history.cpu++,this.setState(n),"lose")}};function E(e){const t=document.createElement("div");var n=3,i="piedra",o="papel",a="tijera";t.innerHTML=`
+  `,t.appendChild(n),t.querySelector(".boton").addEventListener("click",()=>{e.goTo("/game")}),t}const s={data:{currentGame:{cpuPlay:"",playerPlay:""},history:{player:0,cpu:0,draw:0}},listeners:[],getState(){return JSON.parse(localStorage.getItem("saved-games"))?(this.data.history=JSON.parse(localStorage.getItem("saved-games")),this.data):this.data},setState(e){this.data=e;for(const t of this.listeners)t(e);localStorage.setItem("saved-games",JSON.stringify(e.history))},subscribe(e){this.listeners.push(e)},setMove(e){const t=this.getState();t.currentGame.playerPlay=e,t.currentGame.cpuPlay=this.cpuRandomizer(Math.trunc(Math.random()*3))},cpuRandomizer(e){return{0:"tijera",1:"papel",2:"piedra"}[e]},whoWins(e,t){const n=this.getState();if(e=="")console.log("no se seleccion\xF3 opci\xF3n");else return e==t?(n.history.draw++,this.setState(n),"draw"):e=="papel"&&t=="piedra"||e=="tijera"&&t=="papel"||e=="piedra"&&t=="tijera"?(n.history.player++,this.setState(n),"win"):(n.history.cpu++,this.setState(n),"lose")}};function w(e){const t=document.createElement("div");var n=3,i="piedra",o="papel",a="tijera";t.innerHTML=`
           <div class="inicio">
           <div class="contenedor-counter">
           <div class="circle">${n}</div>
@@ -128,7 +128,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
     align-items: center;
     font-size: 150px;
   }
-  `;const d=t.querySelector("#piedra"),l=t.querySelector("#tijera"),u=t.querySelector("#papel");t.appendChild(r),d.addEventListener("click",()=>{s.setMove("piedra"),l.style.opacity="0.5",u.style.opacity="0.5"}),l.addEventListener("click",()=>{s.setMove("tijera"),d.style.opacity="0.5",u.style.opacity="0.5"}),u.addEventListener("click",()=>{s.setMove("papel"),d.style.opacity="0.5",l.style.opacity="0.5"});function h(f,p){var y=setInterval(()=>{f.querySelector(".circle").innerHTML=p,p--,p<0&&(clearInterval(y),setTimeout(()=>{e.goTo("/result")},800))},1e3)}return h(t,n),t}function S(e){const t=s.getState(),n=s.whoWins(t.currentGame.playerPlay,t.currentGame.cpuPlay),i=document.createElement("div");i.innerHTML=`
+  `;const d=t.querySelector("#piedra"),l=t.querySelector("#tijera"),u=t.querySelector("#papel");t.appendChild(r),d.addEventListener("click",()=>{s.setMove("piedra"),l.style.opacity="0.5",u.style.opacity="0.5"}),l.addEventListener("click",()=>{s.setMove("tijera"),d.style.opacity="0.5",u.style.opacity="0.5"}),u.addEventListener("click",()=>{s.setMove("papel"),d.style.opacity="0.5",l.style.opacity="0.5"});function m(h,p){var g=setInterval(()=>{h.querySelector(".circle").innerHTML=p,p--,p<0&&(clearInterval(g),setTimeout(()=>{e.goTo("/result")},800))},1e3)}return m(t,n),t}function j(e){const t=s.getState(),n=s.whoWins(t.currentGame.playerPlay,t.currentGame.cpuPlay),i=document.createElement("div");i.innerHTML=`
       <div class="inicio ${n}">
         <div class="contenedor-contenido">
             <result-star variant="star ${n}"></result-star>
@@ -169,7 +169,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
     display: flex;
     justify-content: center;
   }
-  `,i.appendChild(o),i.querySelector(".boton").addEventListener("click",()=>{e.goTo("/game")}),i}function k(e){const t=document.createElement("div"),n=s.getState(),i=n.currentGame.playerPlay,o=n.currentGame.cpuPlay;t.innerHTML=`
+  `,i.appendChild(o),i.querySelector(".boton").addEventListener("click",()=>{e.goTo("/game")}),i}function E(e){const t=document.createElement("div"),n=s.getState(),i=n.currentGame.playerPlay,o=n.currentGame.cpuPlay;t.innerHTML=`
           <div class="inicio">
           <my-jugada item="${o} cpu-manito"></my-jugada>
           <my-jugada item="${i} player-manito"></my-jugada>
@@ -187,11 +187,11 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
     left: 0;
     right: 0;
   }
-  `,t.appendChild(a),setTimeout(()=>{e.goTo("/scores-page")},2e3),t}const C=[{path:/\/welcome/,component:w},{path:/\/instrucciones/,component:j},{path:/\/game/,component:E},{path:/\/result/,component:k},{path:/\/scores-page/,component:S}],m="/desafio-m5-vite";function g(){return location.host.includes("github.io")}function L(e){function t(i){g()&&m+i,history.pushState({},"",i),n(i)}function n(i){g()&&i.replace(m,"");for(const o of C)if(o.path.test(i)){const a=o.component({goTo:t});e.firstChild&&e.firstChild.remove(),e.appendChild(a)}}location.pathname==m?t("/welcome"):n(location.pathname),window.onpopstate=function(i){n(location.pathname)}}function T(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("item"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n;const a=document.createElement("style");a.innerHTML=`
+  `,t.appendChild(a),setTimeout(()=>{e.goTo("/scores-page")},2e3),t}const S=[{path:/\/welcome/,component:v},{path:/\/instrucciones/,component:b},{path:/\/game/,component:w},{path:/\/result/,component:E},{path:/\/scores-page/,component:j}];function k(e){function t(i){history.pushState({},"",i),n(i)}function n(i){for(const o of S)if(o.path.test(i)){const a=o.component({goTo:t});e.firstChild&&e.firstChild.remove(),e.appendChild(a)}}location.pathname=="/desafio-m5-vite/",t("/welcome"),window.onpopstate=function(i){n(location.pathname)}}function C(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("item"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n;const a=document.createElement("style");a.innerHTML=`
       .piedra{
         bottom: 0px;
         left: 30px;
-        background-image: url("../../img/piedra.svg");
+        background-image: url("/src/img/piedra.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -200,7 +200,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
       .papel{
         bottom: 0px;
         right: 30px;
-        background-image: url("../../img/papel.svg");
+        background-image: url("/src/img/papel.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -209,7 +209,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("../../img/tijera.svg");
+        background-image: url("/src/img/tijera.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -238,7 +238,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
         right: 0;
         bottom: 0px;
       }
-      `,i.appendChild(o),i.appendChild(a)}}customElements.define("my-jugada",e)}function M(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.attachShadow({mode:"open"}),i=document.createElement("button"),o=document.createElement("style");i.className="btn-ppt",o.innerHTML=`
+      `,i.appendChild(o),i.appendChild(a)}}customElements.define("my-jugada",e)}function L(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.attachShadow({mode:"open"}),i=document.createElement("button"),o=document.createElement("style");i.className="btn-ppt",o.innerHTML=`
       .btn-ppt{
         font-size: 45px;
         color: white;
@@ -252,7 +252,7 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
         font-family: "Odibee Sans", cursive;
         cursor: pointer;
       }
-      `,i.textContent=this.textContent,n.appendChild(i),n.appendChild(o)}}customElements.define("button-ppt",e)}function P(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("variant"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n,n=="star win"?o.textContent="\xA1Ganaste!":n=="star draw"?o.textContent="Empate":n=="star lose"?o.textContent="Perdiste":o.textContent="Pas\xF3 algo raro";const a=document.createElement("style");a.innerHTML=`
+      `,i.textContent=this.textContent,n.appendChild(i),n.appendChild(o)}}customElements.define("button-ppt",e)}function M(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("variant"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n,n=="star win"?o.textContent="\xA1Ganaste!":n=="star draw"?o.textContent="Empate":n=="star lose"?o.textContent="Perdiste":o.textContent="Pas\xF3 algo raro";const a=document.createElement("style");a.innerHTML=`
       .star{
         font-size: 55px;
         color: black;
@@ -309,4 +309,4 @@ var x=Object.defineProperty;var b=(e,t,n)=>t in e?x(e,t,{enumerable:!0,configura
         <p class="puntos">Empate: ${this.drawPoints}</p>
       </div>
       </div>
-      `,this.shadow.appendChild(t)}});(function(){const e=document.querySelector(".root");M(),T(),P(),L(e)})();
+      `,this.shadow.appendChild(t)}});(function(){const e=document.querySelector(".root");L(),C(),M(),k(e)})();
