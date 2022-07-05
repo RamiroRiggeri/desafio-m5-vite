@@ -37,7 +37,7 @@ export function initRouter(divRoot: Element) {
       }
     }
   }
-  if (location.pathname == "/") {
+  if (location.pathname == BASE_PATH) {
     goTo("/welcome");
   } else {
     handleRoute(location.pathname);

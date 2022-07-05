@@ -10,7 +10,7 @@ const routes = [
     { path: /\/result/, component: initResult },
     { path: /\/scores-page/, component: initScoresPage },
 ];
-const BASE_PATH = "/desafio-m5";
+const BASE_PATH = "/desafio-m5-vite";
 function isGithubPages() {
     return location.host.includes("github.io");
 }
@@ -32,7 +32,7 @@ export function initRouter(divRoot) {
             }
         }
     }
-    if (location.pathname == "/") {
+    if (location.pathname == BASE_PATH) {
         goTo("/welcome");
     }
     else {
