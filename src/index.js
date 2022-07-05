@@ -8,8 +8,6 @@ import "./components/scoreboard";
     const root = document.querySelector(".root");
     initBtnPpt();
     initManitos();
-    // initCounter();
-    // initScoreboard();
     initStar();
     initRouter(root);
 })();

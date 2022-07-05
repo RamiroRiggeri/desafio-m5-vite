@@ -15,8 +15,6 @@ import { initResult } from "./pages/result";
   const root = document.querySelector(".root");
   initBtnPpt();
   initManitos();
-  // initCounter();
-  // initScoreboard();
   initStar();
   initRouter(root);
 })();
