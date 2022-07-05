@@ -264,12 +264,12 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         justify-content: center;
       }
       .lose{
-        background-image: url("../../img/estrella-roja.svg");
+        background-image: url("/src/img/estrella-roja.svg");
         background-size: cover;
         color: white;
       }
       .win{
-        background-image: url("../../img/estrella.svg");        
+        background-image: url("/assets/img/estrella.svg");        
         background-size: contain;
         background-repeat: no-repeat;
         color: white;
