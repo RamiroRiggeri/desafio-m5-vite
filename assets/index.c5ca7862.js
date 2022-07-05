@@ -252,7 +252,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         font-family: "Odibee Sans", cursive;
         cursor: pointer;
       }
-      `,i.textContent=this.textContent,n.appendChild(i),n.appendChild(o)}}customElements.define("button-ppt",e)}function M(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("variant"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n,n=="star win"?o.textContent="\xA1Ganaste!":n=="star draw"?o.textContent="Empate":n=="star lose"?o.textContent="Perdiste":o.textContent="Pas\xF3 algo raro";const a=document.createElement("style");a.innerHTML=`
+      `,i.textContent=this.textContent,n.appendChild(i),n.appendChild(o)}}customElements.define("button-ppt",e)}const M=require("../../img/estrella-roja.svg");function T(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("variant"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n,n=="star win"?o.textContent="\xA1Ganaste!":n=="star draw"?o.textContent="Empate":n=="star lose"?o.textContent="Perdiste":o.textContent="Pas\xF3 algo raro";const a=document.createElement("style");a.innerHTML=`
       .star{
         font-size: 55px;
         color: black;
@@ -264,7 +264,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         justify-content: center;
       }
       .lose{
-        background-image: url("/src/img/estrella-roja.svg");
+        background-image: ${M};
         background-size: cover;
         color: white;
       }
@@ -309,4 +309,4 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         <p class="puntos">Empate: ${this.drawPoints}</p>
       </div>
       </div>
-      `,this.shadow.appendChild(t)}});(function(){const e=document.querySelector(".root");L(),C(),M(),k(e)})();
+      `,this.shadow.appendChild(t)}});(function(){const e=document.querySelector(".root");L(),C(),T(),k(e)})();
