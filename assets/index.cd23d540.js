@@ -128,7 +128,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
     align-items: center;
     font-size: 150px;
   }
-  `;const d=t.querySelector("#piedra"),l=t.querySelector("#tijera"),u=t.querySelector("#papel");t.appendChild(r),d.addEventListener("click",()=>{s.setMove("piedra"),l.style.opacity="0.5",u.style.opacity="0.5"}),l.addEventListener("click",()=>{s.setMove("tijera"),d.style.opacity="0.5",u.style.opacity="0.5"}),u.addEventListener("click",()=>{s.setMove("papel"),d.style.opacity="0.5",l.style.opacity="0.5"});function m(h,p){var g=setInterval(()=>{h.querySelector(".circle").innerHTML=p,p--,p<0&&(clearInterval(g),setTimeout(()=>{e.goTo("/result")},800))},1e3)}return m(t,n),t}function j(e){const t=s.getState(),n=s.whoWins(t.currentGame.playerPlay,t.currentGame.cpuPlay),i=document.createElement("div");i.innerHTML=`
+  `;const d=t.querySelector("#piedra"),l=t.querySelector("#tijera"),u=t.querySelector("#papel");t.appendChild(r),d.addEventListener("click",()=>{s.setMove("piedra"),l.style.opacity="0.5",u.style.opacity="0.5"}),l.addEventListener("click",()=>{s.setMove("tijera"),d.style.opacity="0.5",u.style.opacity="0.5"}),u.addEventListener("click",()=>{s.setMove("papel"),d.style.opacity="0.5",l.style.opacity="0.5"});function m(g,p){var h=setInterval(()=>{g.querySelector(".circle").innerHTML=p,p--,p<0&&(clearInterval(h),setTimeout(()=>{e.goTo("/result")},800))},1e3)}return m(t,n),t}function j(e){const t=s.getState(),n=s.whoWins(t.currentGame.playerPlay,t.currentGame.cpuPlay),i=document.createElement("div");i.innerHTML=`
       <div class="inicio ${n}">
         <div class="contenedor-contenido">
             <result-star variant="star ${n}"></result-star>
@@ -169,7 +169,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
     display: flex;
     justify-content: center;
   }
-  `,i.appendChild(o),i.querySelector(".boton").addEventListener("click",()=>{e.goTo("/game")}),i}function E(e){const t=document.createElement("div"),n=s.getState(),i=n.currentGame.playerPlay,o=n.currentGame.cpuPlay;t.innerHTML=`
+  `,i.appendChild(o),i.querySelector(".boton").addEventListener("click",()=>{e.goTo("/game")}),i}function S(e){const t=document.createElement("div"),n=s.getState(),i=n.currentGame.playerPlay,o=n.currentGame.cpuPlay;t.innerHTML=`
           <div class="inicio">
           <my-jugada item="${o} cpu-manito"></my-jugada>
           <my-jugada item="${i} player-manito"></my-jugada>
@@ -187,11 +187,11 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
     left: 0;
     right: 0;
   }
-  `,t.appendChild(a),setTimeout(()=>{e.goTo("/scores-page")},2e3),t}const S=[{path:/\/welcome/,component:v},{path:/\/instrucciones/,component:b},{path:/\/game/,component:w},{path:/\/result/,component:E},{path:/\/scores-page/,component:j}];function k(e){function t(i){history.pushState({},"",i),n(i)}function n(i){for(const o of S)if(o.path.test(i)){const a=o.component({goTo:t});e.firstChild&&e.firstChild.remove(),e.appendChild(a)}}location.pathname=="/desafio-m5-vite/",t("/welcome"),window.onpopstate=function(i){n(location.pathname)}}function C(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("item"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n;const a=document.createElement("style");a.innerHTML=`
+  `,t.appendChild(a),setTimeout(()=>{e.goTo("/scores-page")},2e3),t}const E=[{path:/\/welcome/,component:v},{path:/\/instrucciones/,component:b},{path:/\/game/,component:w},{path:/\/result/,component:S},{path:/\/scores-page/,component:j}];function L(e){function t(i){history.pushState({},"",i),n(i)}function n(i){for(const o of E)if(o.path.test(i)){const a=o.component({goTo:t});e.firstChild&&e.firstChild.remove(),e.appendChild(a)}}location.pathname=="/desafio-m5-vite/",t("/welcome"),window.onpopstate=function(i){n(location.pathname)}}const k=require("url:../../img/piedra.svg"),C=require("url:../../img/tijera.svg"),T=require("url:../../img/papel.svg");function M(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("item"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n;const a=document.createElement("style");a.innerHTML=`
       .piedra{
         bottom: 0px;
         left: 30px;
-        background-image: url(./src/img/piedra.svg);
+        background-image: url(${k});
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -200,7 +200,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .papel{
         bottom: 0px;
         right: 30px;
-        background-image: url(../../img/papel.svg);
+        background-image: url(${T});
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -209,7 +209,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("./img/tijera.svg");
+        background-image: url(${C});
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -238,7 +238,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         right: 0;
         bottom: 0px;
       }
-      `,i.appendChild(o),i.appendChild(a)}}customElements.define("my-jugada",e)}function L(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.attachShadow({mode:"open"}),i=document.createElement("button"),o=document.createElement("style");i.className="btn-ppt",o.innerHTML=`
+      `,i.appendChild(o),i.appendChild(a)}}customElements.define("my-jugada",e)}function P(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.attachShadow({mode:"open"}),i=document.createElement("button"),o=document.createElement("style");i.className="btn-ppt",o.innerHTML=`
       .btn-ppt{
         font-size: 45px;
         color: white;
@@ -252,7 +252,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         font-family: "Odibee Sans", cursive;
         cursor: pointer;
       }
-      `,i.textContent=this.textContent,n.appendChild(i),n.appendChild(o)}}customElements.define("button-ppt",e)}const M=require("../../img/estrella-roja.svg");function T(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("variant"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n,n=="star win"?o.textContent="\xA1Ganaste!":n=="star draw"?o.textContent="Empate":n=="star lose"?o.textContent="Perdiste":o.textContent="Pas\xF3 algo raro";const a=document.createElement("style");a.innerHTML=`
+      `,i.textContent=this.textContent,n.appendChild(i),n.appendChild(o)}}customElements.define("button-ppt",e)}const H=require("url:../../img/estrella.svg"),$=require("url:../../img/estrella-roja.svg");function z(){class e extends HTMLElement{constructor(){super()}connectedCallback(){this.render()}render(){const n=this.getAttribute("variant"),i=this.attachShadow({mode:"open"}),o=document.createElement("div");o.className=n,n=="star win"?o.textContent="\xA1Ganaste!":n=="star draw"?o.textContent="Empate":n=="star lose"?o.textContent="Perdiste":o.textContent="Pas\xF3 algo raro";const a=document.createElement("style");a.innerHTML=`
       .star{
         font-size: 55px;
         color: black;
@@ -264,12 +264,12 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         justify-content: center;
       }
       .lose{
-        background-image: ${M};
+        background-image: url(${$});
         background-size: cover;
         color: white;
       }
       .win{
-        background-image: url("/assets/img/estrella.svg");        
+        background-image: url(${H});        
         background-size: contain;
         background-repeat: no-repeat;
         color: white;
@@ -309,4 +309,4 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
         <p class="puntos">Empate: ${this.drawPoints}</p>
       </div>
       </div>
-      `,this.shadow.appendChild(t)}});(function(){const e=document.querySelector(".root");L(),C(),T(),k(e)})();
+      `,this.shadow.appendChild(t)}});(function(){const e=document.querySelector(".root");P(),M(),z(),L(e)})();
