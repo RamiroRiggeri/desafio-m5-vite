@@ -1,5 +1,9 @@
 import { state } from "../../state";
 
+const imagePiedraURL = require("url:../../img/piedra.svg");
+const imageTijeraURL = require("url:../../img/tijera.svg");
+const imagePapelURL = require("url:../../img/papel.svg");
+
 export function initManitos() {
   class MyJugada extends HTMLElement {
     constructor() {
@@ -22,7 +26,7 @@ export function initManitos() {
       .piedra{
         bottom: 0px;
         left: 30px;
-        background-image: url(./src/img/piedra.svg);
+        background-image: url(${imagePiedraURL});
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -31,7 +35,7 @@ export function initManitos() {
       .papel{
         bottom: 0px;
         right: 30px;
-        background-image: url(../../img/papel.svg);
+        background-image: url(${imagePapelURL});
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -40,7 +44,7 @@ export function initManitos() {
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("./img/tijera.svg");
+        background-image: url(${imageTijeraURL});
         background-size: cover;
         height: 13em;
         width: 125px;

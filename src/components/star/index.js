@@ -1,4 +1,5 @@
-const imgUrl = require("../../img/estrella-roja.svg");
+const imageStarURL = require("url:../../img/estrella.svg");
+const imageRedStarURL = require("url:../../img/estrella-roja.svg");
 export function initStar() {
     class Estrella extends HTMLElement {
         constructor() {
@@ -37,12 +38,12 @@ export function initStar() {
         justify-content: center;
       }
       .lose{
-        background-image: ${imgUrl};
+        background-image: url(${imageRedStarURL});
         background-size: cover;
         color: white;
       }
       .win{
-        background-image: url("/assets/img/estrella.svg");        
+        background-image: url(${imageStarURL});        
         background-size: contain;
         background-repeat: no-repeat;
         color: white;
