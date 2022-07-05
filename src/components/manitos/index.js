@@ -34,7 +34,7 @@ export function initManitos() {
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("../img/tijera.svg");
+        background-image: url("desafio-m5-vite/assets/tijera.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
