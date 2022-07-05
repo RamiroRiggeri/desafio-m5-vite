@@ -200,7 +200,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .papel{
         bottom: 0px;
         right: 30px;
-        background-image: url("/src/img/papel.svg");
+        background-image: url("../../img/papel.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -209,7 +209,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("/src/img/tijera.svg");
+        background-image: url("../img/tijera.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
