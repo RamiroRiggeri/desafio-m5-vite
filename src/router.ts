@@ -12,13 +12,21 @@ const routes = [
   { path: /\/scores-page/, component: initScoresPage },
 ];
 
+const BASE_PATH = "/desafio-m5";
+
+function isGithubPages() {
+  return location.host.includes("github.io");
+}
+
 export function initRouter(divRoot: Element) {
   function goTo(path) {
+    const completePath = isGithubPages() ? BASE_PATH + path : path;
     history.pushState({}, "", path);
     handleRoute(path);
   }
 
   function handleRoute(path) {
+    const newRoute = isGithubPages() ? path.replace(BASE_PATH, "") : path;
     for (const r of routes) {
       if (r.path.test(path)) {
         const el = r.component({ goTo: goTo });

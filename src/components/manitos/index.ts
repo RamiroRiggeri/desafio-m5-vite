@@ -22,7 +22,7 @@ export function initManitos() {
       .piedra{
         bottom: 0px;
         left: 30px;
-        background-image: url("../../../img/piedra.svg");
+        background-image: url("../../img/piedra.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -31,7 +31,7 @@ export function initManitos() {
       .papel{
         bottom: 0px;
         right: 30px;
-        background-image: url("../../../img/papel.svg");
+        background-image: url("../../img/papel.svg");
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -40,7 +40,7 @@ export function initManitos() {
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("../../../img/tijera.svg");
+        background-image: url("../../img/tijera.svg");
         background-size: cover;
         height: 13em;
         width: 125px;

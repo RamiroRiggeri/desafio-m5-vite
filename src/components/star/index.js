@@ -36,12 +36,12 @@ export function initStar() {
         justify-content: center;
       }
       .lose{
-        background-image: url("../../../img/estrella-roja.svg");
+        background-image: url("../../img/estrella-roja.svg");
         background-size: cover;
         color: white;
       }
       .win{
-        background-image: url("../../../img/estrella.svg");        
+        background-image: url("../../img/estrella.svg");        
         background-size: contain;
         background-repeat: no-repeat;
         color: white;
