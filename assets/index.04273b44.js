@@ -191,7 +191,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .piedra{
         bottom: 0px;
         left: 30px;
-        background-image: url("/src/img/piedra.svg");
+        background-image: url(/src/img/piedra.svg);
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -200,7 +200,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .papel{
         bottom: 0px;
         right: 30px;
-        background-image: url("../../img/papel.svg");
+        background-image: url(../../img/papel.svg);
         background-size: cover;
         height: 13em;
         width: 125px;
@@ -209,7 +209,7 @@ var f=Object.defineProperty;var y=(e,t,n)=>t in e?f(e,t,{enumerable:!0,configura
       .tijera{
         bottom: 0px;
         left: 180px;
-        background-image: url("desafio-m5-vite/assets/tijera.svg");
+        background-image: url(desafio-m5-vite/assets/tijera.svg);
         background-size: cover;
         height: 13em;
         width: 125px;
